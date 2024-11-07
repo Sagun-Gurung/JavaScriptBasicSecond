@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1" onclick="upperCase()">this is the demo for uppercase</p>
+</body>
+</html>
+<script>
+    function upperCase(){
+        const x = document.getElementById("p1")
+        x.innerHTML=x.innerHTML.toUpperCase()
+        console.log(x.innerHTML)
+    }
+    // document.getElementsByClassName("p1").innerHTML.toUpperCase()
+</script>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Hello DOM Collection 1</p>
+    <p>Hello DOM Collection 2</p>
+    <p>Hello DOM Collection 3</p>
+    <button onclick="changeColor()">Change Color</button>
+</body>
+</html>
+<script>
+    function changeColor(){
+        const myCollection = document.getElementsByTagName("p")
+
+        for(let i = 0; i<=myCollection.length; i++){
+            myCollection[i].style.color = "red"
+        }
+    }
+</script>

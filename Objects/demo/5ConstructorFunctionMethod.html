@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <script>
+        // Constructor Function for Person objects
+        function Person(first, last, age){
+            this.firstName = first,
+            this.lastName = last,
+            this.age = age,
+            this.nationality= "Nepali",
+            this.fullName = function() {
+                return this.firstName + " "+ this.lastName
+            }
+        }
+
+        //add a new property in the object constructor function
+        Person.prototype.eyeColor = "red"
+
+        //creating a Person object
+        const myFather = new Person("John", "Doe", 50)
+        const myMother = new Person("Sally", "Rally", 45)
+
+        //adding a name method to an object
+        myMother.changeFirstName = function(name){
+            this.firstName = name
+        }
+        myMother.changeFirstName("Sony")
+
+        //instead we can also add method in object by
+        Person.prototype.changeLastName= function(name){
+            this.lastName = name;
+        }
+        myMother.changeLastName("Doe")
+
+        document.getElementById("p1").innerHTML ="My father's full name is "+ myFather.fullName() + "."
+        document.getElementById("p2").innerHTML ="My mother's name is "+ myMother.firstName + " and last name is " + myMother.lastName
+
+    </script>
+</body>
+</html>

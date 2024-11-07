@@ -1,0 +1,73 @@
+Vanilla Javascript Let's GO!!!!!!!!!!!
+
+https://30dayscoding.com/blog/vanilla-javascript-tutorial
+
+Working with DOM
+
+https://www.freecodecamp.org/news/the-complete-javascript-handbook-f26b2c71719c/
+
+
+The exponentiation operator (**)
+Raise the first operand to the power of the second operand
+
+1 ** 2 //1
+2 ** 1 //2
+2 ** 2 //4
+2 ** 8 //256
+8 ** 2 //64
+
+Precedence rules
+Every complex statement with multiple operators in the same line will introduce precedence problems.
+
+Take this example:
+
+let a = 1 * 2 + 5 / 2 % 2
+The result is 2.5, but why?
+
+What operations are executed first, and which need to wait?
+
+Some operations have more precedence than the others. The precedence rules are listed in this table:
+
+Operator	Description
+* / %	multiplication/division
++ -	addition/subtraction
+=	assignment
+Operations on the same level (like + and -) are executed in the order they are found, from left to right.
+
+*************** Arrays
+Since we can add an array into an array, we can create multi-dimensional arrays, which have very useful applications (e.g. a matrix):
+
+const matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9]
+]
+
+matrix[0][0] //1
+matrix[2][0] //7
+
+
+************ Array Length
+Note that you can set the length of the array. If you assign a bigger number than the arrays current capacity, nothing happens. If you assign a smaller number, the array is cut at that position:
+
+const a = [1, 2, 3]
+a //[ 1, 2, 3 ]
+a.length = 2
+a //[ 1, 2 ]
+
+https://www.w3schools.com/js/
+https://www.youtube.com/watch?v=EerdGm-ehJQ
+
+
+document represents= webpage
+window represents = browser
+
+at the end of 7hr - ROck paper scissor
+reviewed css
+classList
+
+
+Main idea of js - 1todo-list.html
+save the data
+generate the html
+make it interactive

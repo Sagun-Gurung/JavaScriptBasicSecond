@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin-Flip Game</title>
+</head>
+<body>
+    <button onclick="pickComputerMove('head')">Head</button>
+
+    <button onclick="pickComputerMove('tail')">Tail</button>
+
+<script>
+    function pickComputerMove(userChoice){
+        const randomNumber = Math.random()
+        let computerMove = randomNumber <0.5? 'head': 'tail'
+        console.log('computer says',computerMove)
+
+        let result = computerMove === userChoice? 'You guessed correct': 'You Lose'
+
+        alert(result)
+    }
+</script>
+</body>
+</html>

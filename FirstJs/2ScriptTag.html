@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- in the head -->
+    <script>
+        function myFunction(){
+            document.getElementById("p1").innerHTML = "Paragraph Changed"
+        }
+    </script>
+</head>
+<body>
+    <p id="p1">hELLO</p>
+    <p id="p2">Hey Hey</p>
+    <button type="button" onclick="myFunction()">Change</button>
+    <button type="button" onclick="myFunction1()">External</button>
+
+    <p>Never call document.write after the document has finished loading.
+        It will overwrite the whole document.
+        
+    </p>
+
+        <script>document.write(5+6)</script>
+        <!-- The document.write() method should only be used for testing. -->
+        <button onclick="document.write()">Vanish</button>
+
+    <!-- Placing scripts at the bottom of the <body> element improves the display speed,
+        because script interpretation slows down the display. -->
+    <!-- <script>
+        document.getElementById('p1').innerHTML = "My First Javascript"
+    </script> -->
+
+    <!-- External Scripts -->
+     <script src="myScript.js"></script>
+</body>
+
+</html>

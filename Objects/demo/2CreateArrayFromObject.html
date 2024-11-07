@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <script>
+        const person ={
+            name: "Dev",
+            age: 20,
+            city: "New York"
+        }
+
+        //creating an array
+        const array1 = Object.values(person)
+        const array2 = Object.keys(person)
+        const array3 = Object.entries(person)
+        // document.getElementById("p1").innerHTML = array3
+
+        //or
+        let text = " "
+        
+        for(let [data, info] of Object.entries(person)){
+            text += data + ":" + info + "<br>"
+        }
+        document.getElementById("p1").innerHTML = text
+
+    </script>
+</body>
+</html>

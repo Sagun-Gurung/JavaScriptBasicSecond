@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <p id="p2"></p>
+    <script>
+        const myArr = [12,23,22,9,12];
+
+        // document.getElementById("p1").innerHTML = myArr.flatMap(x=> x*10)
+        document.getElementById("p1").innerHTML = myArr.flatMap(x=> [x, x*10])
+
+        const myString = "Watermelon"
+
+        const result = myString.split("").map(value =>{
+            return value + "<br>"
+        })
+
+        document.getElementById("p2").innerHTML = result
+
+    </script>
+</body>
+</html>

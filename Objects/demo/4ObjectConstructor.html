@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1"></p>
+    <script>
+        // Constructor Function for Person objects
+        function Person(first, last, age){
+            this.firstName = first,
+            this.lastName = last,
+            this.age = age,
+            this.nationality= "Nepali"
+        }
+
+        //add a new property in the object constructor function
+        Person.prototype.eyeColor = "red"
+
+        //creating a Person object
+        const myFather = new Person("John", "Doe", 50)
+        // document.getElementById("p1").innerHTML ="My father's name is "+ myFather.firstName + "."
+        // document.getElementById("p1").innerHTML ="My father's nationality is "+ myFather.nationality + "."
+        document.getElementById("p1").innerHTML ="My father's eye color is "+ myFather.eyeColor + "."
+
+    </script>
+</body>
+</html>

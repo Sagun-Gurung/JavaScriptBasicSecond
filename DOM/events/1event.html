@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 onclick="this.innerHTML = 'OOPs!!'">Hey</h2>
+    <button onclick="this.innerHTML= 'Congrats'">Click Me</button>
+    <!-- another way -->
+     <h3 onclick="changeText(this)">Click Here Too</h3>
+     <!-- another way -->
+      <button id="myBtn">Here</button>
+      <p id="p1"></p>
+</body>
+</html>
+<script>
+    function changeText(id){
+        id.innerHTML = "This is from function!"
+    }
+
+    function displayDate(){
+     document.getElementById("p1").innerHTML =Date()
+    }
+    document.getElementById("myBtn").onclick = displayDate
+</script>
