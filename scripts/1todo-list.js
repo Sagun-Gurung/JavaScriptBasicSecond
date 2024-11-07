@@ -15,8 +15,10 @@ function renderTodoList() {
     <div> ${dueDate} </div> 
     <button onclick="
         todoList.slice(${i}, 1)
-        renderTodoList()
-      ">Delete
+        renderTodoList()"
+      class='delete-todo-button'
+    >
+      Delete
     </button>`;
 
     todoListHtml += html;

@@ -1,4 +1,3 @@
-// Dom > SSD > Rock Paper Scissor
 let score = JSON.parse(localStorage.getItem("score")) || {
   win: 0,
   lose: 0,
@@ -6,6 +5,28 @@ let score = JSON.parse(localStorage.getItem("score")) || {
 };
 //calling the function up so that it can be seen on the page constantly
 updateScoreElement();
+
+// auto play function
+
+let isAutoPlaying = false;
+
+// since in each loop, the setInterval function gives different id,
+// we store it the following variable outside the function
+let intervalId;
+
+function autoPlay() {
+  if (!isAutoPlaying) {
+    //setInterval returns an Id which helps us to stop the setInterval function
+    intervalId = setInterval(() => {
+      const playerMove = pickComputerMove();
+      playGame(playerMove);
+    }, 2000);
+    isAutoPlaying = true;
+  } else {
+    clearInterval(intervalId);
+    isAutoPlaying = false;
+  }
+}
 
 function playGame(playerMove) {
   //function inside a function
@@ -61,8 +82,8 @@ function playGame(playerMove) {
 // displaying the data inside the html element
 function updateScoreElement() {
   document.querySelector(".js-score").innerHTML = `Wins: ${score.win},
-            Losses: ${score.lose},
-            Ties: ${score.tie}`;
+              Losses: ${score.lose},
+              Ties: ${score.tie}`;
 }
 
 // let computerMove =''; //rather make the function return the value

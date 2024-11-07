@@ -71,3 +71,12 @@ Main idea of js - 1todo-list.html
 save the data
 generate the html
 make it interactive
+
+slice() is also used to make a copy of another array - 1ArraysAndLoops
+
+loops 
+
+break; -> breaks the loop early
+continue -> skip one loop/iteration
+
+return -> break out of the loop

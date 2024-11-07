@@ -9,6 +9,19 @@
 
     
     <script>
+        // slice() - to make copy of array
+
+        const array1 = [1, 2]
+        // const array2 = array1
+
+        // array2.push(3)// both array1 and 2 have 3 in their array now- to avoid that problem
+        //we use slice()
+        const array2 = array1.slice()
+        array2.push(3)
+        
+
+        console.log(array1)
+        console.log(array2)
 
     </script>
 </body>
